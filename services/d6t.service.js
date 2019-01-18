@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 const config = require('config');
 const d6t = require('d6t').d6t;
 
@@ -24,7 +25,7 @@ module.exports = {
     methods: {
         querySensor() {
             const data = d6t.d6t_read_js(this.d6tDevh);
-            const presence = data.slice(1, -1).some(temp => temp >= this.settings.threshold);
+            const presence = _.mean(data.slice(1, -1)) >= this.settings.threshold;
 
             if (this.presence !== presence || !this.settings.onlyChanges) {
                 this.presence = presence;

@@ -31,9 +31,7 @@
     "discoveryType": "binary_sensor",
     "discoveryConfig": {
       "name": "D6T Default",
-      "payload_on": true,
-      "payload_off": false,
-      "device_class": "motion",
+      "device_class": "presence",
       "value_template": "{{ value_json.value }}"
     }
   },
