@@ -25,7 +25,7 @@ module.exports = {
     methods: {
         querySensor() {
             const data = d6t.d6t_read_js(this.d6tDevh);
-            const avg = _.mean(data.slice(1, -1))
+            const avg = _.mean(data.slice(1, -1));
             const presence = avg >= this.settings.threshold;
 
             if (this.presence !== presence || !this.settings.onlyChanges) {
