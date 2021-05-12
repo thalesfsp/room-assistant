@@ -52,7 +52,7 @@
     "js-yaml": "^3.13.1",
     "kalmanjs": "^1.1.0",
     "lodash": "^4.17.15",
-    "mathjs": "^6.5.0",
+    "mathjs": "^7.5.1",
     "nest-emitter": "^1.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
